@@ -1,0 +1,3 @@
+dataset_path: 'data/EmotioNet'
+num_classes: 12
+neighbor_num: 4
