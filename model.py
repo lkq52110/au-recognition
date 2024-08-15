@@ -61,8 +61,6 @@ class Head(nn.Module):
 class GNN(nn.Module):
     def __init__(self, in_channels, num_classes, neighbor_num=4, metric='dots'):
         super(GNN, self).__init__()
-        # in_channels: dim of node feature
-        # num_classes: num of nodes
         # neighbor_num: K in paper and we select the top-K nearest neighbors for each node feature.
 
         self.in_channels = in_channels
