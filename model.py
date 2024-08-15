@@ -99,12 +99,6 @@ class GNN(nn.Module):
             threshold = si.topk(k=self.neighbor_num, dim=-1, largest=True)[0][:, :, -1].view(b, n, 1)
             adj = (si >= threshold).float()
 
-        elif self.metric == 'l1':
-            si = x.detach().repeat(1, n, 1).view(b, n, n, c)
-            si = torch.abs(si.transpose(1, 2) - si)
-            si = si.sum(dim=-1)
-            threshold = si.topk(k=self.neighbor_num, dim=-1, largest=False)[0][:, :, -1].view(b, n, 1)
-            adj = (si <= threshold).float()
 
         else:
             raise Exception("Error: wrong metric: ", self.metric)
