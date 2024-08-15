@@ -31,7 +31,7 @@ if __name__ == '__main__':
     image = np.array(image)
     rgb_img = np.float32(image) / 255
     input_tensor = preprocess_image(rgb_img, mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-    net = MEFARG(num_classes=8, backbone='resnet50', neighbor_num=3, metric='dots')
+    net = MACG(num_classes=8, backbone='resnet50', neighbor_num=3, metric='dots')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     # model.load_state_dict(torch.load('checkpoints/best_model_fold3.pth', map_location=device))
     net = load_state_dict(net, 'checkpoints/best_model_fold3.pth')
