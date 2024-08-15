@@ -124,7 +124,7 @@ def set_outdir(conf):
     outdir = os.path.join(outdir, prefix)
     ensure_dir(outdir)
     conf['outdir'] = outdir
-    shutil.copyfile("./model/MAFG-GNN-CCFG.py", os.path.join(outdir, 'MAFG-GNN-CCFG.py'))
+    shutil.copyfile("./model.py", os.path.join(outdir, 'MAFG-GNN-CCFG.py'))
 
     return conf
 
