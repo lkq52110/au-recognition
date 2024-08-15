@@ -18,11 +18,9 @@ parser.add_argument('--N-fold', default=3, type=int, help="the ratio of train an
 parser.add_argument('-f', '--fold', default=1, type=int, metavar='N', help='the fold of three folds cross-validation ')
 
 # Network and Loss
-parser.add_argument('--arc', default='resnet50', type=str, choices=['resnet18', 'resnet50', 'resnet101',
-                                                                    'swin_transformer_tiny', 'swin_transformer_small',
-                                                                    'swin_transformer_base'],
-                    help="backbone architecture resnet / swin_transformer")
-parser.add_argument('--metric', default="dots", type=str, choices=['dots', 'cosine', 'l1'],
+parser.add_argument('--arc', default='resnet50', type=str, choices=['resnet18', 'resnet50', 'resnet101'],
+                    help="backbone architecture resnet")
+parser.add_argument('--metric', default="dots", type=str, choices=['dots', 'cosine'],
                     help="metric for graph top-K nearest neighbors selection")
 parser.add_argument('--lam', default=0.001, type=float, help="lambda for adjusting loss")
 
@@ -35,8 +33,8 @@ parser.add_argument('--experiment', default="Test", type=str, help="experiment n
 parser.add_argument('--resume', default='', type=str, metavar='path', help='path to latest checkpoint (default: none)')
 
 # Param
-parser.add_argument('-b', '--batch-size', default=64, type=int, metavar='N', help='mini-batch size (default: 128)')
-parser.add_argument('-lr', '--learning-rate', default=0.00001, type=float, metavar='LR', help='initial learning rate')
+parser.add_argument('-b', '--batch-size', default=16, type=int, metavar='N', help='mini-batch size (default: 128)')
+parser.add_argument('-lr', '--learning-rate', default=0.0001, type=float, metavar='LR', help='initial learning rate')
 parser.add_argument('-e', '--epochs', default=20, type=int, metavar='N', help='number of total epochs to run')
 parser.add_argument('-j', '--num_workers', default=4, type=int, metavar='N',
                     help='number of data loading workers (default: 4)')
