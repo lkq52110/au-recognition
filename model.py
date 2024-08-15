@@ -30,7 +30,7 @@ class Head(nn.Module):
 
         self.mafg = MAFG(self.num_classes, self.in_channels)
         self.ccfg = CCFG(self.num_classes, self.in_channels, self.in_channels)
-        self.post_concat = LinearBlock(self.in_channels * 2, self.in_channels)  # 调整以适应拼接后的维度
+        self.post_concat = LinearBlock(self.in_channels * 2, self.in_channels)
 
     def forward(self, x):
         # MAFG
