@@ -284,9 +284,3 @@ class CCFG(nn.Module):
 
         return x_ccfg
 
-
-if __name__ == "__main__":
-    model = MACG()
-    input = torch.randn(3, 3, 224, 224)
-    output = model(input)
-    print("output_shape:", output.shape)
