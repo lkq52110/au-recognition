@@ -1,6 +1,4 @@
 
-# python train.py --dataset DISFA --exp-name DISFA_Fold1 -b 16 -lr 0.0001 --fold 1
-
 import os
 import numpy as np
 import torch

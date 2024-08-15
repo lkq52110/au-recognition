@@ -11,8 +11,8 @@ import torch
 from PIL import Image
 import torchvision.transforms as transforms
 import numpy as np
-from model.LKQmodel21 import MEFARG
-from LKQutils import *
+from model import MACG
+from utils import *
 
 
 class SemanticSegmentationTarget:
