@@ -1,3 +1,9 @@
+Our paper has been released:
+
+"Enhancing facial action unit recognition through topological feature integration and relational learning", The Visual Computer 2025
+
+*[Paper](https://link.springer.com/article/10.1007/s00371-025-03817-9)
+
 Start
 =
 - Python 3.
