@@ -2,6 +2,7 @@ torch >= 2.0.1
 torchvision
 pillow
 numpy
+pandas
 tqdm
 easydict
 pyyaml == 5.4.1

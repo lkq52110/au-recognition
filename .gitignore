@@ -1,0 +1,5 @@
+# CSV processing logs
+csv_processing.log
+
+# Test directories and files created by CSV splitter
+测试*
